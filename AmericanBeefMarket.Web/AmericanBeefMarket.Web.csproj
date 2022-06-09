@@ -23,4 +23,8 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AmericanBeefMarket.Common\AmericanBeefMarket.Common.csproj" />
+  </ItemGroup>
+
 </Project>

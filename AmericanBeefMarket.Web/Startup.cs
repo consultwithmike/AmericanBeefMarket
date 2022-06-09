@@ -1,4 +1,5 @@
 using AmericanBeefMarket.Web.Data;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -28,6 +29,8 @@ namespace AmericanBeefMarket.Web
 				.AddRoles<IdentityRole>()
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 			services.AddRazorPages();
+
+			services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

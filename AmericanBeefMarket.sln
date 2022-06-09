@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanBeefMarket.Web", "AmericanBeefMarket.Web\AmericanBeefMarket.Web.csproj", "{EA0516DF-E98B-4522-876E-050437FC297B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmericanBeefMarket.Web", "AmericanBeefMarket.Web\AmericanBeefMarket.Web.csproj", "{EA0516DF-E98B-4522-876E-050437FC297B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanBeefMarket.DataModel", "AmericanBeefMarket.DataModel\AmericanBeefMarket.DataModel.csproj", "{EED89F42-43B0-4697-97A8-D18014AFE04A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmericanBeefMarket.DataModel", "AmericanBeefMarket.DataModel\AmericanBeefMarket.DataModel.csproj", "{EED89F42-43B0-4697-97A8-D18014AFE04A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanBeefMarket.Repository.SqlServer", "AmericanBeefMarket.Repository.SqlServer\AmericanBeefMarket.Repository.SqlServer.csproj", "{0929383A-DD3C-43E6-82D2-053EF1DE3B1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmericanBeefMarket.Repository.SqlServer", "AmericanBeefMarket.Repository.SqlServer\AmericanBeefMarket.Repository.SqlServer.csproj", "{0929383A-DD3C-43E6-82D2-053EF1DE3B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanBeefMarket.Interfaces", "AmericanBeefMarket.Interfaces\AmericanBeefMarket.Interfaces.csproj", "{35CCD0D4-837E-4080-81C6-C93CE5228D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmericanBeefMarket.Interfaces", "AmericanBeefMarket.Interfaces\AmericanBeefMarket.Interfaces.csproj", "{35CCD0D4-837E-4080-81C6-C93CE5228D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanBeefMarket.Common", "AmericanBeefMarket.Common\AmericanBeefMarket.Common.csproj", "{D61BDFDA-3FE8-47D5-8379-C694677D5AC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{35CCD0D4-837E-4080-81C6-C93CE5228D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35CCD0D4-837E-4080-81C6-C93CE5228D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35CCD0D4-837E-4080-81C6-C93CE5228D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61BDFDA-3FE8-47D5-8379-C694677D5AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61BDFDA-3FE8-47D5-8379-C694677D5AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61BDFDA-3FE8-47D5-8379-C694677D5AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61BDFDA-3FE8-47D5-8379-C694677D5AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
