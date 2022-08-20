@@ -12,6 +12,9 @@ namespace AmericanBeefMarket.DataModel
         public int Id { get; set; }
 
         [Required]
+        public int OrderId { get; set; }
+
+        [Required]
         public int ItemId { get; set; }
 
         [Required, Range(0, double.MaxValue)]
@@ -19,5 +22,9 @@ namespace AmericanBeefMarket.DataModel
 
         [Required, Range(0, double.MaxValue), DataType(DataType.Currency), Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
+
+        public Order Order { get; set; }
+
+        public Item Item { get; set; }
     }
 }

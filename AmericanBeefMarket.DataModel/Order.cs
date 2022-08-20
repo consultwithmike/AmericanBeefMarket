@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Numerics;
 using System.Text;
 
 namespace AmericanBeefMarket.DataModel
 {
+    [Index(nameof(CustomerId)), Index(nameof(UserId)), Index(nameof(ShippingEmail)), Index(nameof(ShippingPhone))]
     public class Order
     {
         [Key]
@@ -63,6 +66,8 @@ namespace AmericanBeefMarket.DataModel
         [DataType(DataType.DateTime)]
         public DateTime? ModifiedDate { get; set; }
 
-        public virtual IList<OrderItem> Items { get; set; }
+        public Customer Customer { get; set; }
+
+        public IList<OrderItem> Items { get; set; }
     }
 }
