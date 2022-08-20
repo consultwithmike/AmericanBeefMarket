@@ -98,7 +98,7 @@ namespace AmericanBeefMarket.Web.Areas.Identity.Pages.Account
                 {
                     Name = Input.Name,
                     Address = Input.Address,
-                    Phone = Input.Phone,
+                    PhoneNumber = Input.Phone,
                     UserName = Input.Email,
                     Email = Input.Email
                 };
