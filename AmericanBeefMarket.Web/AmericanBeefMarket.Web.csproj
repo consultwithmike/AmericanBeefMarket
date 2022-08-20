@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AmericanBeefMarket.Common\AmericanBeefMarket.Common.csproj" />
+    <ProjectReference Include="..\AmericanBeefMarket.DataModel\AmericanBeefMarket.DataModel.csproj" />
   </ItemGroup>
 
 </Project>

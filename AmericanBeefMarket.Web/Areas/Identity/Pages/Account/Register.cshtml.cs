@@ -50,6 +50,21 @@ namespace AmericanBeefMarket.Web.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            public string Role { get; set; }
+
+            [Required]
+            [StringLength(128, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 16)]
+            public string Name { get; set; }
+
+            [Required]
+            [StringLength(128, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 16)]
+            public string Address { get; set; }
+
+            [Required]
+            [StringLength(16, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 10)]
+            public string Phone { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -64,17 +79,6 @@ namespace AmericanBeefMarket.Web.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-
-            [Required]
-            public string Role { get; set; }
-
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            public string Name { get; set; }
-
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            public string Address { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null, string role = null)
@@ -94,6 +98,7 @@ namespace AmericanBeefMarket.Web.Areas.Identity.Pages.Account
                 {
                     Name = Input.Name,
                     Address = Input.Address,
+                    Phone = Input.Phone,
                     UserName = Input.Email,
                     Email = Input.Email
                 };
@@ -122,6 +127,10 @@ namespace AmericanBeefMarket.Web.Areas.Identity.Pages.Account
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                    // create a customer
+
+                    // create a ranch if they are classified as one
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
